@@ -1,5 +1,7 @@
 #!/bin/bash
 HOME=~
+echo "Trying to close MS Teams before clearing cache..."
+killall Microsoft Teams
 echo "Make sure MS Teams is closed before you continue! Hit ENTER key to continue..."
 read
 echo "Removing Teams cached files..."
@@ -14,4 +16,5 @@ sudo rm -r ${HOME}'/Library/Application Support/Microsoft/Teams/tmp' &> /dev/nul
 sudo rm -r ${HOME}'/Library/Application Support/Microsoft/Teams/Code Cache' &> /dev/null
 sudo rm -r ${HOME}'/Library/Application Support/Microsoft/Teams/Session Storage' &> /dev/null
 
-echo "MS Teams cache cleared"
+echo "MS Teams cache cleared. Restarting Teams..."
+open '/Applications/Microsoft Teams.app'

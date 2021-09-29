@@ -1,20 +1,26 @@
 # MS Teams Fix (by clearing some cache)
-Fixes an issue with MS Teams if new messages or notifications are not shown on macOS
+Fixes an issue with MS Teams if new messages or notifications are not shown on **macOS**
 
 ## Execute the script
 
 Make the file executable and run it:
 
 ```shell
+# Make it executable if it isn't
+$ sudo chmod +x fix_ms_teams.sh
+# Run the script
 $ ./fix_ms_teams.sh
+
 # Output 
+Trying to close MS Teams before clearing cache...
 Make sure MS Teams is closed before you continue! Hit ENTER key to continue...
 
 Removing Teams cached files...
-MS Teams cache cleared
+Password:
+MS Teams cache cleared. Restarting Teams...
 ```
 
-
+> **Notice**: closing and re-starting MS Teams might not always work automatically. However, this should not affect the "fix".
 
 ## Error Description
 
